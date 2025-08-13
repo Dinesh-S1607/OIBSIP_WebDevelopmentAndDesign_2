@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  padding: 2vw;
+  min-height: 100vh;
+}
+header {
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+header h3 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+nav {
+  position: relative;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 5vw, 4rem);
+  padding: 1rem 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+}
+nav a:hover {
+  text-decoration: underline;
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+section {
+  margin: 2rem 0;
+  background: #fff;
+  padding: clamp(1rem, 3vw, 2rem);
+  border-radius: 10px;
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.profile-img {
+  width: clamp(80px, 20vw, 120px);
+  height: clamp(100px, 25vw, 140px);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  margin-top: 1rem;
+  list-style: square;
+  padding-left: 1rem;
+}
+.skill-list li {
+  background: #e2e2e2;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+.project {
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+.project h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+.project p {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin: 0.5rem 0;
+}
+.project a {
+  color: #4f9ae9;
+  text-decoration: underline;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+.education-list {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+.education-list li {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin-bottom: 0.5rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+form h4 {
+  font-style: italic;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+form input,
+form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+form button {
+  width: fit-content;
+  padding: 0.75rem 2rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+form button:hover {
+  background: #555;
+}
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #333;
+  color: white;
+}
+.socials a {
+  color: #fff;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+.socials a:hover {
+  text-decoration: underline;
+}
+footer p {
+  margin-top: 0.5rem;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+}
+@media (max-width: 768px) {
+  section {
+    padding: 1rem;
+  }
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .skill-list {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .project, .education-list, form {
+    padding: 0;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #444;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 10px;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+  header h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+  header h3 {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+  }
+  .profile-img {
+    width: clamp(60px, 15vw, 100px);
+    height: clamp(80px, 20vw, 120px);
+  }
+  section {
+    margin: 1rem 0;
+    padding: 0.75rem;
+  }
+  form input, form textarea, form button {
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+  }
+}
